@@ -2,19 +2,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { MaterialModule } from '@angular/material';
 
-import { AppComponent } from './app.component';
+import { AppComponent, DialogContentComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DialogContentComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    MaterialModule.forRoot(),
   ],
   providers: [],
+  entryComponents: [DialogContentComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
